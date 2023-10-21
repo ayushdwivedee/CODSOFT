@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+
+      * {
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        width: 90%;
+        margin: auto;
+      }
+      nav {
+        margin-top: 50px;
+      }
+      nav label {
+        background-color: rgb(108, 31, 176);
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        color: white;
+        font-weight: 700;
+      }
+      nav ul {
+        float: right;
+        word-spacing: 40px;
+        list-style: none;
+        margin-top: 0px;
+      }
+      nav ul li {
+        display: inline-block;
+      }
+      nav ul li a {
+        color: purple;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .fa{
+        font-size: 30px;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        
+      }
+      .fa-instagram{
+        background-color: rgb(239,76,95);
+        
+      }
+      .fa-github{
+        background-color: black;
+      }
+      .fa-linkedin{
+        background-color:rgb(10,102,194) ;
+      }
+      .fa-twitter{
+        background-color: rgb(29,161,242);
+      }
+      .fa-facebook-square{
+        background-color: rgb(72,103,170);
+      }
+      #header{
+        margin-top: 120px;
+         display: flex;
+      }
+      .working-profession{
+        width: 50%; 
+      }
+      .bio{    
+        width: 50%;
+        padding-right: 150px;
+      }
+      .name{
+        font-size: 50px;
+        font-weight: 500;
+      }
+      .name+p{
+        color: rgb(138,144,153);
+        font-size: 22px;
+        line-height: 40px;
+      }
+      .icon{
+        margin-top: 30px;
+        margin-left: 10px;
+      }
+      .button{
+        margin-top: 60px;
+        display: flex; 
+        width: 70%;
+        justify-content: space-between;
+      }
+      .button1 a ,.button2 a{
+         background-color: rgb(85,25,139);
+         color: white;
+         padding: 12px;
+         border-radius: 7px;
+         font-size: 20px;
+         font-weight: 600;
+      }      
+      .skill-img img  {
+        width: 500px;       
+        transition: transform 0.5s;
+      filter: grayscale(100%);
+      }
+      .skill-img img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      filter: grayscale(0);
+      }
+       .para-img{
+        margin-top: 50px;
+        display: flex;
+       }
+      .left{   
+        width: 50%;
+      }
+      .left img{
+        transition: transform 1s;
+       transform :rotateX('45');
+        margin-top: 100px;
+        width: 100%;
+      } 
+      .right{
+        padding-left: 150px;
+      }
+      .h2{
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      .h2+p{
+        font-size: 22px;
+        color: rgb(138,144,153);  ;
+      }
+      .progress{
+        margin-top: 50px;
+        display: flex;
+      }
+      .bars{
+        width: 50%;
+      }
+      .anima{
+        width: 50%;
+      }
+      .anima img{
+        width: 100%;
+      }
+      .h3{
+        font-size: 40px;
+      }
+      .h3~p{
+         color: rgb(83, 83, 83);
+         font-size: 20px;
+      }
+      .skill-bar{
+        height: 20px;
+        width: 80%;
+        border-radius: 6px;
+        background-color:rgb(231, 230, 230);
+      }
+      .skill-bar .skill-per{
+        height: 100%;
+        width: 90%;
+        border-radius: 6px;
+        background-color: rgb(237, 121, 13);
+      }
+      .skill-bar .skill-per2{
+        height: 100%;
+        width: 70%;
+        border-radius: 6px;
+        background-color: rgb(110, 157, 204);
+      }
+      .skill-bar .skill-per3{
+        height: 100%;
+        width: 60%;
+        border-radius: 6px;
+        background-color: rgb(24, 206, 33);
+      }
+      .fa-book{
+        color: black;
+        font-size: 20px;
+      }
+      .open-source{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+      }
+      .sec-head>p{
+        font-size: 40px;
+      }
+      .card{
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 20px;
+        padding-top: 0px;
+      }
+      .storage{
+         display: inline-block;
+         float: right;
+      }
+      .title{
+        font-size: 25px;
+         font-weight: 600;
+         color: rgb(94, 85, 85);
+      }
+      .title+p{
+        margin-top: -20px;
+        color: rgb(119, 119, 120);
+        font-size: 18px;
+      }
+      .title+p~span{
+        font-size: 14px;
+        color: rgb(138,144,153);
+        padding-bottom: 30px;
+      }
+      .open{
+        margin-top: 50px;
+        text-align: center;
+      }      
+      .my-project{
+        margin-top: 100px;
+      }
+      .company{
+        margin-top: 10px;
+        display: flex;
+      }
+      .logo{
+        width: 300px;
+        height: 200px;
+      }
+      .logo img{
+        width: 100%;
+        height: 100%;
+      }
+      .head{
+        margin-top: 100px;
+      }
+      .certifications{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+      }
+      .card2{
+        border-radius: 5px;
+        padding: 30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }      
+      .card-img>img{
+        border-radius: 5px;
+        width: 100%; 
+        height: 250px;
+      }
+      .img-name{
+        margin-top: 30px;      
+        font-size: 30px;
+        text-align: center;
+        color: rgb(70, 70, 70);
+      }
+      .img-name+p{   
+        font-weight: 400;     
+        margin-top: -20px;
+        font-size: 22px;
+        text-align: center;
+        color: rgb(152, 152, 152);
+      }
+      .deg{
+        font-weight: 400;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 18px;
+        color: rgb(129, 129, 129);
+      }
+      .deg+p{
+        font-weight: 400;
+        margin-top: 30px;
+        font-size: 18px;
+        color: rgb(128, 127, 127);
+        text-align: center;
+      }
+      .main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+      }
+      .title-2{
+        margin-top: 10px;
+      }
+      .first,.second{       
+         background-color: rgb(254, 210, 194);
+         transition: transform 0.5s;      
+         padding: 20px;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .first:hover,.second:hover {
+        background-color: rgb(245, 229, 10);   
+        transform: scaleX(1.1); 
+      }
+      .head-1{
+        padding-top: 50px;
+      }
+      .box {
+        top: 30px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 380px;
+        border-radius: 3px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.image {
+  background-color: rgb(153, 153, 229);
+  background-size: cover;
+  height: 135px;
+  font-size: 32px;
+  padding-right: 50px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 20px;
+}
+.text {
+  /* background-color: rgb(222, 64, 64); */
+ text-align: center;
+ padding: 20px;
+  position: relative;
+}
+.text > div {
+  position: relative;
+   color: rgb(142, 141, 141);
+   font-weight: 500;
+}
+.talkslide{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  
+}
+.talkslide span{
+  background-color: rgb(123, 84, 196);
+  padding:7px 40px;
+  border-radius: 5px;
+  color: rgb(223, 221, 221);
+}
+.text:before {
+  content: "";
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  top: -20px;
+  left: -10%;
+  transform: rotate(5deg);
+   
+}
+.head-2{
+  display: flex;
+  margin-top: 50px;
+}
+.tweet+p{
+  margin-top : 85px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: black;
+}
+.tweet+p>span{
+  color: blue;
+}
+.head-2 img{
+  margin-top: 130px;
+  margin-left: -270px;
+}
+.head-3{
+  margin-top: 100PX;
+}
+.mike img{
+  height: 60px;
+  width: 50px;
+  margin-left: 20px;
+}
+ .skillset{
+  background-color: rgb(34, 32, 32);
+  color: white;
+  font-size: 25px;
+ }
+ .skillset img{
+  width: 35px;
+  
+ }
+ .fa-map-marker{
+  color: rgb(0, 0, 0);
+  margin-left: -10px;
+  float: left;
+ }
+ .location{
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(76, 75, 75);
+  float: left; 
+ }
+ .location+p{
+  margin-top: 90px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(76, 75, 75);
+ }
+ .intro{
+  display: flex;
+ }
+ .ayush-img{
+  padding-left: 50px;
+ }
+ .ayush{
+  width: 250px;
+  border-radius: 50%;
+  border: 7px solid blue;
+ }
+ #color{
+  background-color: black;
+  
+  height: 100px;
+  width: 120%; 
+  margin-top: 50px;
+  margin-left: -80px;
+ }
+ #color p{
+  color: white;
+  text-align: center ;
+  margin-left: -110px;
+  padding-top: 25px;
+  font-size: 30px;
+ }
+ </style>
+
+  </head>
+
+
+  <body>
+    <div>
+      <nav>
+        <label class="ayush">Ayush Dwivedi</label>
+        <ul>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#card-book">Open-Source</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#contact">Contact-Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  <header>
+        <div id="header">
+            <div class="bio">
+              <p class="name">Hey ! I'm Ayush 👋</p>
+              <p>
+                A enthusiastic full stack software developer 🚀 having an experience
+                of building web applications with Javascript /Reactjs /Nodejs/ React
+                Native and some other cool libraries and frameworks
+              </p>
+              <div class="icon">
+                <a href="https://github.com/ayushdwivedee"><i class="fa fa-github"></i>&nbsp;&nbsp;</a>
+                <a href="https://www.linkedin.com/in/ayushdwivedee/"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;</a>
+                <a href="https://twitter.com/AyushBhartiya9"><i class="fa fa-twitter"></i>&nbsp;&nbsp;</a>
+                <a href="https://instagram.com/ayushdwivedee"><i class="fa fa-instagram"></i>&nbsp;&nbsp;</a>
+                <a href="https://facebook.com/ayushdwivedee"><i class="fa fa-facebook-square"></i></a>
+              </div>
+              <div class="button">
+                <div class="button1 con"><a href="#"  >CONTACT ME</a> </div>
+                <div class="button2"><a href="my CV.pdf" download>SEE MY RESUME</a></div>
+              </div>
+            </div>
+            <div class="working-profession">
+              <img src="https://img.freepik.com/premium-photo/business-man-works-laptop-programmer-is-work-successful-worker-white-background-illustration_715671-2639.jpg" alt="animated">
+            </div>
+          </div>
+  </header>
+    <section id="skills">
+        <div class="para-img">
+            <div class="left"><img src="https://png.pngtree.com/png-vector/20200429/ourmid/pngtree-web-development-concept-flat-design-png-image_2197063.jpg" alt="dev"></div>
+            <div class="right">
+                <p class="h2">What I do</p>
+                <p>CRAZY FULL STACK DEVELOPER WHO WANT TO EXPLORE EVERY TECH STACK</p>
+                <div class="skill-img"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4tVMVNXq74M3p4wTTKbZbKPZO2VTnAf4Xw&usqp=CAU" alt="WEB SKILL"></div>
+                <p>⚡Develop highly intractive Front end / User Interfaces for your web and mobile applications</p>
+                <p>⚡Progressive Web Applications(PWA) in normal and SPA Stacks</p>
+                <p>⚡Integration of third party services such as Firebase/ AWS / Digital Ocean</p>
+            </div>
+        </div>
+        <div class="progress">
+          <div class="bars">
+            <p class="h3">Proficiency</p>
+            <p>Frontend/Design</p>
+            <div class="skill-bar">
+              <div class="skill-per"></div>
+            </div>
+            <p>Backend</p>
+            <div class="skill-bar">
+              <div class="skill-per2"></div>
+            </div>
+            <p>Programming</p>
+            <div class="skill-bar">
+              <div class="skill-per3"></div>
+            </div>
+ 
+             
+          </div>
+          <div class="anima"><img src="animation.jpg" alt="dev"></div>
+      </div>
+    </section>
+    
+    <section id="card-book">
+        <div class="sec-head">
+          <p>Open Source Projects</p>
+          <div class="open-source">
+            <div class="card">
+              <p class="title"> <i class="fa fa-book"></i>react-blog-github</p>
+              <p>React + Github Issues 👉 Your Personal Blog 🔥</p>
+              <span>🟡 Javascript</span>&nbsp;&nbsp;
+              <span>🔱56</span>&nbsp;&nbsp;
+              <span>⭐495</span>
+              <span class="storage">16424 KB</span>
+            </div>
+            <div class="card">
+              <p class="title"> <i class="fa fa-book"></i>developerFolio</p>
+              <p>Software Developer Portfolio Template that help you  showcase your work and skills as a software developer⚡</p>
+              <span>🟡 Javascript</span>&nbsp;&nbsp;
+              <span>🔱172</span>&nbsp;&nbsp;
+              <span>⭐551</span>
+              <span class="storage">11566 KB</span>
+            </div>
+            <div class="card"> 
+              <p class="title"> <i class="fa fa-book"></i>Grocery-Items-Detection</p>
+              <p>🎉Grocery Items Detection using Tenserflow.js and IBM Watson📸 </p>
+              <span>🟡 Javascript</span>&nbsp;&nbsp;
+              <span>🔱3</span>&nbsp;&nbsp;
+              <span>⭐21</span>
+              <span class="storage">23595 KB</span>
+            </div>
+            <div class="card">
+              <p class="title"> <i class="fa fa-book"></i>awesome-web-components</p>
+              <p>awesome web components and snippets for every Front-End Developer 🔥</p>
+              <span>🟡 Javascript</span>&nbsp;&nbsp;
+              <span>🔱15</span>&nbsp;&nbsp;
+              <span>⭐17</span>
+              <span class="storage">2054 KB</span>
+            </div>
+            <div class="card"> 
+              <p class="title"> <i class="fa fa-book"></i>PWA-Olx-app</p>
+              <p>Olx Progressive Web App with offline Feature , Messaging and Add to Favorite   </p>
+              <span>🟡 Javascript</span>&nbsp;&nbsp;
+              <span>🔱5</span>&nbsp;&nbsp;
+              <span>⭐5</span>
+              <span class="storage">3165 KB</span>
+            </div>
+            <div class="card"> 
+              <p class="title"> <i class="fa fa-book"></i>Locate-Me</p>
+              <p>📍A React Native live location application to find your loved one's  </p>
+              <span>🟡 Javascript</span>&nbsp;&nbsp;
+              <span>🔱1</span>&nbsp;&nbsp;
+              <span>⭐4</span>
+              <span class="storage">32945 KB</span>
+            </div>
+          </div>
+          <div class="button1 open"><a href="#"  > MORE PROJECTS</a> </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="my-project">
+          <p class="h2">Big Projects</p>
+          <p>SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR WEBSITES</p>
+          <div class="company">
+            <div class="logo"><img src="https://marketplace.canva.com/EAE0rNNM2Fg/1/0/1600w/canva-letter-c-trade-marketing-logo-design-template-r9VFYrbB35Y.jpg" alt=""></div>
+            <div class="logo"><img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/01104846/1952-768x591.png" alt=""></div>
+            <div class="logo"><img src="https://cdn.kickcharge.com/wp-content/uploads/2018/04/24093540/airprofessionals-logo-1024x625.jpg" alt=""></div>
+          </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="head">
+          <p class="h2">Achievements And Certifications 🏆</p>
+          <p>ACHIEVEMENTS , CERTIFICATIONS , AWARD LETTERS AND SOME COOL STUFF THAT I HAVE DONE !</p>
+          <div class="certifications">
+            <div class="card2">
+                <div class="card-img"><img src="https://2.bp.blogspot.com/-biHApfwXkBw/W6ET9KvbYKI/AAAAAAAABtM/MdebDHaD-nUqJSAhOBwobIw9zO4UP14aACLcBGAs/s1600/GCI%2B-%2BVertical%2B-%2BGray%2BText%2B-%2BWhite%2BBG.png" alt=""></div>
+                <p class="img-name">Google Code-In Finalist</p>
+                <p>First Indian to be selected as Google Code-in Finalist from 4000 students from 77 different countries</p>
+                <div class="deg">
+                  <span>Certification</span>
+                  <span>Award Letter</span>
+                </div>
+                 <p>Google Code-in Blog</p>
+            </div>
+            <div class="card2">
+              <div class="card-img"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GoogleAssistant_logo.width-1200.format-webp.webp" alt=""></div>
+              <p class="img-name">Google Assistant Action</p>
+              <p>Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide. </p>
+              <div class="deg">
+                <span>View Google Assistant Action</span>  
+              </div>
+                
+            </div>
+            <div class="card2">
+            <div class="card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/1200px-Progressive_Web_Apps_Logo.svg.png" alt=""></div>
+            <p class="img-name">PWA Web App Developer </p>
+            <p>Completed Certification from SMIT for PWA Web App Development</p>
+            <div class="deg">
+              <span>Certification</span>
+              <span>Final Project</span>
+            </div>
+              
+            </div> 
+          </div>
+        </div>
+    </section>
+
+      <section id="blogs">
+          <div class="head">
+              <p class="h2">Blogs</p>
+              <p>WITH LOVE FOR DEVELOPING COOL STUFF.I LOVE TO WRITE AND TEACH OTHERS WHAT I HAVE LEARNED  </p>
+              <div class="main">
+                  <div class="first">
+                      <p class="title title-2">Win a Google Assistant Tshirt and $200 in Google cloud Credits</p>
+                      <p>Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less than 30 min.</p>
+                  </div>
+                  <div class="second">
+                      <p class="title title-2">Why React Is The Best?</p>
+                      <p>React is a JavaScript library for building the user interface. It is maintained by Facebook and a community of individual developers and companies.  </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="talks">
+        <div class="head-1">
+              <p class="h2">TALKS</p>
+              <p>I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😂</p>
+              <div class="box">
+                <div class="image">Build Actions For Google Assistant</div>
+                <div class="text">
+                  <div>
+                     Codelab at GDC Devfest Mumbai 2023
+                     <div class="talkslide">
+                        <span>Slides</span>
+                        <span>Event</span>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="head-2">
+          <p class="h2 tweet">Tweets</p>
+          <p>by <span>@YouTube</span></p>
+          <div>
+            <img src="/twitter.png" alt="">
+          </div>
+        </div>
+        <div class="head-3">
+          <p class="h2 mike">Podcast <img src="/mike.png" alt=""></p>
+          <p>I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY</p>
+          <img src="podcast.png" alt=""> 
+              
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="head">
+          <p class="h2">Reach Out to me!  </p>
+          <p> DISCUSS A PROJECT OR JUST WANT TO SAY HI , MY INBOX IS OPEN FOR ALL</p>
+        </div>
+        <div class="intro">
+            <div>
+                <p class="skillset">"First Indian Google Code-In Finalist &nbsp;<img src="flag.jpg" alt=""> | Software Developer🐺| Open Source Contributor 🔥| Speaker🎙️| Tech Writer✒️"  </p>
+                <i class="fa fa-map-marker"></i>
+                <p class="location">Mumbai , India</p>    
+                <p>Open for opportunities: Yes</p>
+                <div class="icon">
+                  <a href="https://github.com/ayushdwivedee"><i class="fa fa-github"></i>&nbsp;&nbsp;</a>
+                  <a href="https://www.linkedin.com/in/ayushdwivedee/"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;</a>
+                  <a href="https://twitter.com/AyushBhartiya9"><i class="fa fa-twitter"></i>&nbsp;&nbsp;</a>
+                  <a href="https://instagram.com/ayushdwivedee"><i class="fa fa-instagram"></i>&nbsp;&nbsp;</a>
+                  <a href="https://facebook.com/ayushdwivedee"><i class="fa fa-facebook-square"></i></a>
+                </div>
+            </div>
+            <div class="ayush-img">
+                <img class="ayush" src="ayush.png" alt="">
+            </div>
+        </div>
+      </section>
+
+      <footer id="color">
+        <p>Copyright by Ayush Dwivedi with love ❤️ . All rights Reserved.</p>
+         
+      </footer>
+  </body>
+</html>
